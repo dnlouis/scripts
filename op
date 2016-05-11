@@ -1,0 +1,8 @@
+####################################################
+# fileName: orphans.ksh
+#     Desc: Possible Orphaned SAS Session Summery
+#  Contact: Daniel Lewis
+#     Date: 15Jan2011
+####################################################
+ps -ef | grep -e "sasexe/sas" | awk '{ if(length($5)==3) {print $1" "$2" "$5" "$6" "$8}}' | sort
+

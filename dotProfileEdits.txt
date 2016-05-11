@@ -1,0 +1,7 @@
+set -o vi
+export PS1='$ '
+alias ll='ls -la'
+alias mp='ps -ef | grep -e $USER'
+alias qw='exit'
+PATH=$PATH\:~/scripts
+export PATH

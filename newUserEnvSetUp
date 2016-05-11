@@ -1,0 +1,8 @@
+####################################################
+# fileName: newUserEvnSetUp
+#     Desc: Implements my standard working environment
+#  Contact: Daniel Lewis
+#     Date: 11May2016
+####################################################
+cp ~/.profile ~/.profile.bu$(date +"%Y%m%d_%H%M%S")UTC
+cat dotProfileEdits.txt >> ~/.profile
