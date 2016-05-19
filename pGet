@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+#usage: pGet your_url > output_file
+#exampel pGet http://www.google.com > test.txt
+#Notes:  Had to install LWP Perl module with:
+#  cpan App::cpanminus
+#  sudo cpanm LWP
+use LWP::Simple;
+getprint($ARGV[0]) if $ARGV[0];
