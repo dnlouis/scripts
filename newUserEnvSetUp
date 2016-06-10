@@ -6,3 +6,4 @@
 ####################################################
 cp ~/.profile ~/.profile.bu$(date +"%Y%m%d_%H%M%S")UTC
 cat dotProfileEdits.txt >> ~/.profile
+sudo apt-get install tree
