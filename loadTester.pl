@@ -1,4 +1,4 @@
-#!C:\\Perl64\\bin\\perl -w
+#!\\bin\\perl -w
 #
 #FileName:  loadTester.pl
 #Description:  This program will print the prime factors of all numbers le to $ARV[0].
@@ -10,7 +10,7 @@
 #</Note DNLewis 20160614> 
 
 use warnings;
-use Win32::Console::ANSI;
+#use Win32::Console::ANSI;
 use Term::ANSIColor;
 
 my ($fctrLimit, $otherJunk) = @ARGV;
