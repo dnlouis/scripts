@@ -11,7 +11,7 @@
 #</Note DNLewis 20160614> 
 
 use warnings;
-use Win32::Console::ANSI;
+# use Win32::Console::ANSI;
 use Term::ANSIColor;
 
 my $start = time;
