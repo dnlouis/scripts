@@ -1,4 +1,5 @@
-#!C:\\Perl64\\bin\\perl -w
+#!/usr/bin/perl
+#  !C:\\Perl64\\bin\\perl -w
 #
 #FileName:  factoringLoop.pl
 #Description:  This program will print the prime factors of all numbers le to $ARV[0].
