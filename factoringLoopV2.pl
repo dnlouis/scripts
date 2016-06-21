@@ -12,7 +12,7 @@
 
 use strict;
 use warnings;
-# use Win32::Console::ANSI;
+#use Win32::Console::ANSI;
 use Term::ANSIColor;
 
 my $start = time;
@@ -21,7 +21,7 @@ if (not defined $fctrLimit) {
 	$fctrLimit=10;
 }
 
-our @primes = (1, 2, 3, 5, 7, 11, 17);
+our @primes = (1, 2, 3, 5, 7, 11, 13);
 
 sub fctr {
 	my $debug = 0; 
@@ -29,12 +29,13 @@ sub fctr {
 	my $fctrs=1;
 	my @x=();
 	my $y=shift(@_);
-	my $halfStart=$y/2;
+	#my $maxPrime=$y/2;
+	my $maxPrime=sqrt($y);
   print "y is: ".$y." xxx\n" if $debug;
   print "the prime is: ".$primes[$i]." yyy\n" if $debug;
-  while (($primes[$i] <= $halfStart) && ($primes[$i] != $y))  {
-  print "\nhalfStart: " . $halfStart . "\n" if $debug;
-  print "boolian1: " . ($primes[$i] <= $halfStart) . "\n" if $debug;
+  while (($primes[$i] <= $maxPrime) && ($primes[$i] != $y))  {
+  print "\nmaxPrime: " . $maxPrime . "\n" if $debug;
+  print "boolian1: " . ($primes[$i] <= $maxPrime) . "\n" if $debug;
   print "p1 ".$primes[$i]."y:".$y."\n" if $debug;
    	next if $y%($primes[$i++]);   
     $y/=$primes[--$i]; 
@@ -43,10 +44,10 @@ sub fctr {
     $fctrs++;
   }
 print "p3 ".$primes[$i]."y:".$y."\n" if $debug;  
-if ($primes[$i] ge $halfStart || $primes[$i] eq $y) {
+if ($primes[$i] ge $maxPrime || $primes[$i] eq $y) {
   	push @x,$y;
   } 
-if ($y > 17 && $fctrs == 1) {
+if ($y > 13 && $fctrs == 1) {
 	push @primes, $y;
 	} 
 
@@ -72,8 +73,6 @@ while ($line<$fctrLimit) {
 #	print "\n";
 	$line++;
 }
-#print join( ',',@primes );	print "\n";
+print join( ',',@primes );	print "\n";
 my $duration = time - $start;
 print "Execution time: $duration s\n";
-
-
