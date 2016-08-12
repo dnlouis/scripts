@@ -1,8 +1,19 @@
-#!/usr/bin/perl
+#!C:\\Perl64\\bin\\perl
+# or !usr/bin/perl
 #usage: pGet your_url > output_file
 #exampel pGet http://www.google.com > test.txt
 #Notes:  Had to install LWP Perl module with:
 #  cpan App::cpanminus
 #  sudo cpanm LWP
 use LWP::Simple;
+if( $ARGV[0] eq '-h' || $ARGV[0] eq '-help' || $ARGV[0] eq "") {
+	USAGE();
+	exit;
+}
+
+sub USAGE { print "Usage: pGet <http://www.google.com\n";
+}	
+
 getprint($ARGV[0]) if $ARGV[0];
+
+__END__
