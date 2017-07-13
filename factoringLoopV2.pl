@@ -12,6 +12,7 @@
 
 use strict;
 use warnings;
+# Un-comment the follownig line if running on Windows.
 #use Win32::Console::ANSI;
 use Term::ANSIColor;
 
